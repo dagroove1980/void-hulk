@@ -8,9 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/howler": "^2.2.12",
+    "howler": "^2.2.4",
     "next": "16.1.6",
+    "pixi.js": "^8.16.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

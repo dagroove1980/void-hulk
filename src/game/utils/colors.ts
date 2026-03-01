@@ -1,0 +1,68 @@
+// Dark sci-fi palette - desaturated blues/grays, alien greens/purples, rust orange
+
+export const COLORS = {
+  // Base environment
+  FLOOR_DARK: 0x1a1e2e,
+  FLOOR_MID: 0x242940,
+  FLOOR_LIGHT: 0x2e3452,
+  WALL_DARK: 0x0f1220,
+  WALL_MID: 0x181d2e,
+  WALL_TOP: 0x222840,
+  WALL_HIGHLIGHT: 0x3a4266,
+  CORRIDOR: 0x1e2336,
+
+  // Doors
+  DOOR_FRAME: 0x4a5580,
+  DOOR_GLOW: 0x6688cc,
+
+  // Fog of war
+  FOG_HIDDEN: 0x000000,
+  FOG_EXPLORED: 0x0a0e18,
+
+  // Alien / enemy
+  ALIEN_GREEN: 0x44cc66,
+  ALIEN_DARK: 0x228844,
+  ACID_YELLOW: 0xccdd44,
+  CORRUPTION_PURPLE: 0x8844cc,
+  CORRUPTION_DARK: 0x553388,
+
+  // Player
+  PLAYER_PRIMARY: 0x4488ff,
+  PLAYER_VISOR: 0x66ccff,
+  PLAYER_ARMOR: 0x556688,
+
+  // UI / HUD
+  HP_RED: 0xcc3333,
+  HP_BG: 0x331111,
+  XP_BLUE: 0x3366cc,
+  XP_BG: 0x112233,
+  SCRAP_ORANGE: 0xcc8833,
+  TEXT_PRIMARY: 0xe8ecf4,
+  TEXT_DIM: 0x778899,
+
+  // Effects
+  SPARK_ORANGE: 0xff8844,
+  SPARK_WHITE: 0xffffff,
+  ICHOR_GREEN: 0x33cc55,
+  DUST: 0x667788,
+
+  // Rarity
+  RARITY_COMMON: 0x8899aa,
+  RARITY_UNCOMMON: 0x44cc66,
+  RARITY_RARE: 0x4488ff,
+  RARITY_LEGENDARY: 0xffaa22,
+
+  // Room types
+  ROOM_START: 0x336699,
+  ROOM_ENEMY: 0x993333,
+  ROOM_LOOT: 0xcc8833,
+  ROOM_TRAP: 0x996633,
+  ROOM_SHOP: 0x339966,
+  ROOM_EVENT: 0x666699,
+  ROOM_BOSS: 0x993366,
+
+  // Minimap
+  MINIMAP_BG: 0x0a0e18,
+  MINIMAP_BORDER: 0x334466,
+  MINIMAP_PLAYER: 0x4488ff,
+} as const;

@@ -1,65 +1,55 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-[#080c14] flex flex-col items-center justify-center text-center px-4">
+      {/* Background pattern */}
+      <div className="fixed inset-0 opacity-5 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #4488ff 1px, transparent 0)',
+          backgroundSize: '40px 40px',
+        }}
+      />
+
+      {/* Title */}
+      <div className="relative z-10">
+        <h1 className="text-6xl md:text-8xl font-black uppercase tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-b from-gray-200 to-gray-600 mb-2">
+          VOID HULK
+        </h1>
+        <p className="text-sm md:text-base text-gray-500 tracking-[0.5em] uppercase mb-12">
+          2.5D Isometric Dungeon Crawler
+        </p>
+
+        {/* Tagline */}
+        <p className="text-gray-400 max-w-md mx-auto mb-12 leading-relaxed text-sm">
+          A derelict ship drifts in the void. Something stirs within its hull.
+          You are the last operative. Explore. Fight. Survive.
+        </p>
+
+        {/* Play Button */}
+        <Link
+          href="/play"
+          className="inline-block px-12 py-4 bg-blue-950/50 hover:bg-blue-900/60 border border-blue-800/50 hover:border-blue-600/60 rounded-lg text-blue-300 font-bold uppercase tracking-[0.3em] text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20"
+        >
+          Enter the Hulk
+        </Link>
+
+        {/* Features */}
+        <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto text-xs text-gray-500">
+          <div>
+            <div className="text-gray-400 font-bold mb-1">EXPLORE</div>
+            Procedural dungeons with fog of war
+          </div>
+          <div>
+            <div className="text-gray-400 font-bold mb-1">FIGHT</div>
+            Dice-based tactical combat
+          </div>
+          <div>
+            <div className="text-gray-400 font-bold mb-1">LOOT</div>
+            Weapons, armor & upgrades
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
